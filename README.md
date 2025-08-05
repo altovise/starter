@@ -1,2 +1,2 @@
-# setup-my-biz
-Repo for SetupMyBiz.shop site
+# startup portfolio
+Repo for portfolio concepts
