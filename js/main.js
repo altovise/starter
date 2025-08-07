@@ -86,3 +86,95 @@ window.PortfolioJS = {
     initProfileImage,
     initPageAnimations
 };
+
+// BUTTONS
+// ==============================================
+
+/**
+ * Initialize square button interactions
+ * Add this function call to your DOMContentLoaded event listener
+ */
+function initSquareButtons() {
+    const buttons = document.querySelectorAll('.square-button');
+    
+    buttons.forEach(button => {
+        // Enhanced hover effect (same as profile image)
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) rotate(5deg)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+
+        // Click animation
+        button.addEventListener('click', function(e) {
+            // Prevent default if it's a link
+            if (this.tagName === 'A' && this.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
+            
+            // Apply click animation
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+
+        // Optional: Add ripple effect on click
+        button.addEventListener('click', function(e) {
+            createRipple(e, this);
+        });
+    });
+}
+
+/**
+ * Create ripple effect for button clicks
+ * @param {Event} event - Click event
+ * @param {Element} button - Button element
+ */
+function createRipple(event, button) {
+    const ripple = document.createElement('span');
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+    
+    ripple.style.cssText = `
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        width: ${size}px;
+        height: ${size}px;
+        left: ${x}px;
+        top: ${y}px;
+        pointer-events: none;
+    `;
+    
+    // Add ripple keyframe animation if not already added
+    if (!document.getElementById('ripple-animation')) {
+        const style = document.createElement('style');
+        style.id = 'ripple-animation';
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    button.appendChild(ripple);
+    
+    // Remove ripple after animation
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Update your DOMContentLoaded event listener to include:
+// initSquareButtons();
