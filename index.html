@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Setup My Biz - Resources and Tools to Get Your Business Up and Running In No Time!</title>
-  <meta name="description" content="Setup My Biz - Resources and Tools to Get Your Business Up and Running In No Time!">
+  <title>Allie Curtis - Portfolio!</title>
+  <meta name="description" content="Veteran UX Researcher and Front-End Designer leveraging data analysis and visualization">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -21,10 +21,201 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Custom Styles for Coming Soon Page
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+    /* Full height layout */
+    html, body {
+      height: 100%;
+      /* background: linear-gradient(135deg, #4a7454 0%, #446140 100%); */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Center container vertically */
+    .container {
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 0;
+    }
+
+    /* Content wrapper for better spacing */
+    /* .content-wrapper {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      animation: fadeInUp 0.8s ease-out;
+    } */
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Custom column adjustments for 70/30 split */
+    .eight-columns {
+      width: 65.33333%;
+    }
+
+    .four-columns {
+      width: 30.66667%;
+      margin-left: 4%;
+    }
+
+    /* Typography enhancements */
+    .content-section h4 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, #181a25, #555356);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .content-section p {
+      font-size: large;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .content-section em {
+      color: #888;
+      font-size: small;
+    }
+
+    /* Status badge */
+    /* .status-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      animation: pulse 2s infinite;
+      transition: transform 0.2s ease;
+    } 
+
+    .status-badge:hover {
+      transform: scale(1.05);
+    }*/
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    /* Profile image styling */
+    .image-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .profile-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 0.9rem;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-image small {
+      font-size: 0.7rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        padding: 2rem;
+        margin: 1rem;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+
+      .eight-columns,
+      .four-columns {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+      }
+
+      .content-section {
+        text-align: center;
+      }
+
+      .content-section h4 {
+        font-size: 2rem;
+      }
+
+      .profile-image {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-wrapper {
+        padding: 1.5rem;
+      }
+
+      .content-section h4 {
+        font-size: 1.75rem;
+      }
+
+      .content-section p {
+        font-size: 1.1rem;
+      }
+
+      .profile-image {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
 
 </head>
 <body>
@@ -32,13 +223,32 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Setup My Biz</h4>
-        <p>This page is a placeholder for the tools and resources we have tried, tested, and highly recommend you use to help you quickly get your small business up and running. <a href="#">Stay Tuned!</a></p>
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="eight columns content-section">
+          <h4>Altovise ("Allie") Curtis | Portfolio</h4>
+          <p>I'm currently crafting an immersive portfolio experience that showcases my journey as a veteran UX researcher transitioning into data analysis and visualization. This space will feature interactive case studies, data-driven insights, and lessons learned from real-world projects. Stay tuned!
+            <br><br>
+            <em>Allie Curtis</em>
+          </p>
+          
+        </div>
+        <div class="four columns">
+          <div class="image-section">
+            <!-- <div class="profile-image">
+              Your Photo Here
+              <small>250x250px recommended</small>
+            </div> -->
+            <img src="images/Allie-Curtis.jpeg" alt="Allie Curtis" class="profile-image">
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/main.js"></script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

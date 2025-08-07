@@ -16,8 +16,15 @@ html {
  * Remove default margin.
  */
 
-body {
+body, p {
   margin: 0;
+  /* font-family: 'alfont-regular'; */
+  font-size: larger;
+}
+
+h1, h2, h3, h4 {
+  /* font-family: 'alfont-boldi'; */
+  /* text-decoration: underline; */
 }
 
 /* HTML5 display definitions
@@ -125,6 +132,11 @@ strong {
 
 dfn {
   font-style: italic;
+}
+
+em.myFont {
+  font-family: 'alfont-boldi';
+  font-size: x-large;
 }
 
 /**
