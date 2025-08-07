@@ -101,10 +101,18 @@ a {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
-a:active,
 a:hover {
   outline: 0;
+  color: #446140;
 }
+
+a:link {
+  color: #4a7454;
+}
+
+a:visited {
+  color: #181a25;
+} 
 
 /* Text-level semantics
    ========================================================================== */
